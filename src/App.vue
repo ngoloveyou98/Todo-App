@@ -1,17 +1,22 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+      <ToDoInput />
+      <SlotDemo>
+        <div class="app-slot">
+            <p>this is slot</p>
+        </div>
+      </SlotDemo>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import ToDoInput from './components/inputRef'
+import SlotDemo from './components/Slot'
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    ToDoInput,
+    SlotDemo
   }
 }
 </script>
@@ -24,5 +29,11 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+  background-color: white;
+      max-width: 500px;
+      margin-left: 300px ;
+      border: 1px solid black;
+      padding: 100px;
 }
+
 </style>
