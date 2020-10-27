@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 Vue.use(Vuex);
-export  const store = new Vuex.Store({
+export const store = new Vuex.Store({
     state:{
         todos:[
             {id:1, content: 'learn about vuex', done:false},
@@ -17,7 +17,7 @@ export  const store = new Vuex.Store({
     mutations:{
         add_todo(state, todo){
             state.todos.push(todo)
-           
+           console.log(todo)
         }
     },
     actions:{

@@ -1,21 +1,22 @@
 <template>
   <div id="app">
       <ToDoInput />
-      <ToDoList />
-      <ToDoItem />
+      <SlotDemo>
+        <div class="app-slot">
+            <p>this is slot</p>
+        </div>
+      </SlotDemo>
   </div>
 </template>
 
 <script>
-import ToDoInput from './components/TodoInput'
-import ToDoList from './components/TodoList'
-import ToDoItem from './components/TodoItem'
+import ToDoInput from './components/inputRef'
+import SlotDemo from './components/Slot'
 export default {
   name: 'App',
   components: {
     ToDoInput,
-    ToDoList,
-    ToDoItem
+    SlotDemo
   }
 }
 </script>
@@ -30,8 +31,9 @@ export default {
   margin-top: 60px;
   background-color: white;
       max-width: 500px;
-      margin-left: 600px ;
-      border: 50px;
+      margin-left: 300px ;
+      border: 1px solid black;
+      padding: 100px;
 }
 
 </style>
